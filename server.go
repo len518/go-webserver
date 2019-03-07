@@ -7,11 +7,11 @@ import (
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "This is a website server by a Go HTTP server.")
+		fmt.Fprintf(w, "This is a web server created with GoLang")
 	})
 
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello World! I'm a HTTP server!")
+		fmt.Fprintf(w, "Hi! I'm an HTTP server!")
 	})
 
 	fs := http.FileServer(http.Dir("static/"))
